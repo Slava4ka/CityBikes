@@ -3,6 +3,7 @@ import { MyStation } from '../../store/stations/types'
 import style from './Stations.module.scss'
 import { ListGroup } from 'react-bootstrap'
 import MySpinner from '../common/MySpinner/MySpinner'
+import { FaHeart } from 'react-icons/fa'
 
 interface StationsProps {
   stationsLoading: boolean
@@ -23,10 +24,14 @@ const Stations: React.FC<StationsProps> = (props: StationsProps) => {
         <div>
           <div className={style.stationsBox__info}>
             <div>
-              <span className={style.bold}>Название выбранной сети:</span> {currentNetwork}
+              <span className={style.bold}>Название выбранной сети:</span>{' '}
+              {currentNetwork}
             </div>
             <div>
-              <span className={style.bold}>Общее количество станции в выбранной сети:</span> {stations.length}
+              <span className={style.bold}>
+                Общее количество станции в выбранной сети:
+              </span>{' '}
+              {stations.length}
             </div>
           </div>
           {stations.length > 0 ? (
@@ -34,7 +39,9 @@ const Stations: React.FC<StationsProps> = (props: StationsProps) => {
               <ListGroup>
                 {stations.map((st, index) => (
                   <ListGroup.Item key={index.toString() + st.id}>
-                    {st.name}
+                    <div className={style.stationsBox__listItem}>
+                      {st.name} <FaHeart size={'1.3em'} />
+                    </div>
                   </ListGroup.Item>
                 ))}
               </ListGroup>

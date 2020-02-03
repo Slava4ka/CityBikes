@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1176fffc-6739-493a-861c-b52acf693e71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Companies/Companies.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Companies/Companies.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Companies/Companies.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Companies/Companies.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Stations/Stations.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Stations/Stations.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Stations/Stations.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Stations/Stations.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MainPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/stations/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/stations/types.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +92,7 @@
       <workItem from="1580490861329" duration="4183000" />
       <workItem from="1580568344815" duration="26577000" />
       <workItem from="1580672470971" duration="10708000" />
-      <workItem from="1580720564804" duration="18507000" />
+      <workItem from="1580720564804" duration="19602000" />
     </task>
     <servers />
   </component>
