@@ -1,8 +1,12 @@
 import React, { useEffect } from 'react'
+import { Col, Container, Row } from 'react-bootstrap'
 import { Company } from '../store/companies/types'
 import { fetchRequest } from '../store/companies/actions'
 import { connect } from 'react-redux'
 import { ApplicationState } from '../store'
+import Companies from '../components/Companies/Companies'
+import Stations from '../components/Stations/Stations'
+import MySpinner from '../components/common/MySpinner/MySpinner'
 
 interface PropsFromState {
   companiesLoading: boolean
@@ -31,11 +35,20 @@ const MainPage: React.FC<AllProps> = (props: AllProps) => {
   return (
     <div>
       {companiesLoading ? (
-        <h1>Loading</h1>
+        <MySpinner />
       ) : companiesError ? (
         companiesError
       ) : (
-        <h1>Hello world!</h1>
+        <Container>
+          <Row>
+            <Col md={6} lg={6}>
+              <Companies companies={companiesData} />
+            </Col>
+            <Col md={6} lg={6}>
+              <Stations />
+            </Col>
+          </Row>
+        </Container>
       )}
     </div>
   )

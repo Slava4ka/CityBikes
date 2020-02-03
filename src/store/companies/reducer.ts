@@ -16,7 +16,7 @@ const companiesReducer: Reducer<CompaniesState> = (
       return { ...state, loading: true }
     }
     case CompaniesActionsTypes.FETCH_SUCCESS: {
-      return { ...state, loading: false, data: { ...action.payload } }
+      return { ...state, loading: false, data: [...action.payload] }
     }
     case CompaniesActionsTypes.FETCH_ERROR: {
       return { ...state, loading: false, errors: action.payload }

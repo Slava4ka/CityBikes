@@ -4,12 +4,26 @@ export enum CompaniesActionsTypes {
   FETCH_ERROR = '@@companies/FETCH_ERROR'
 }
 
+interface City {
+  city: string
+  cityId: string
+  country: string
+}
+
 export interface Company {
   id: number
   name: string
-  companyId: string
+  cities: City[]
 }
 
+export interface CompaniesState {
+  readonly loading: boolean
+  readonly data: Company[]
+  readonly errors?: string
+}
+
+// For request result
+/*
 interface CompanyRequest {
   company: string[]
   id: string
@@ -18,9 +32,31 @@ interface CompanyRequest {
 export interface CompanyRequestResult {
   networks: CompanyRequest[]
 }
+*/
 
-export interface CompaniesState {
-  readonly loading: boolean
-  readonly data: Company[]
-  readonly errors?: string
+interface Location {
+  city: string
+  country: string
+  latitude: number
+  longitude: number
+}
+
+interface License {
+  name: string
+  url: string
+}
+
+interface Network {
+  company: string[]
+  href: string
+  id: string
+  location: Location
+  name: string
+  source: string
+  gbfs_href: string
+  license?: License
+}
+
+export interface RootObject {
+  networks: Network[]
 }
