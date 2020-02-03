@@ -18,6 +18,10 @@ export const companyRequestFilter = (data: CompaniesObject): Company[] => {
       }
     })
 
-    return { id: i, name: name, cities: cities }
+    return {
+      id: i,
+      name: name?.length > 0 ? name : 'Anonymous network',
+      cities: cities
+    }
   })
 }

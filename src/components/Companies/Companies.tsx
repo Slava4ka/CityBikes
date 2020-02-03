@@ -69,14 +69,14 @@ const Companies: React.FC<CompaniesProps> = (props: CompaniesProps) => {
               </Accordion.Toggle>
             </Card.Header>
             <Accordion.Collapse eventKey={companyIndex.toString()}>
-              <Card.Body>
-                <ul>
+              <Card.Body className={style.myList}>
+                <ul className={style.myList__list}>
                   {company.cities.map((city, cityIndex) => (
                     <li
                       key={city.cityId + cityIndex}
-                      className={`${style.city} ${
+                      className={`${style.myList__item} ${
                         checkActiveStatus({ companyIndex, cityIndex }, active)
-                          ? style.active
+                          ? style.myList__active
                           : ''
                       }`}
                       onClick={(): void =>
