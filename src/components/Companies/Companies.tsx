@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import style from './Companies.module.scss'
 import { Company } from '../../store/companies/types'
 import { Accordion, Card, Button } from 'react-bootstrap'
+import { stationsFetchRequest } from '../../store/stations/actions'
 
 interface CompaniesProps {
   companies: Company[]
+  fetchStations: typeof stationsFetchRequest
+  setCurrentNetwork: (value: string) => void
 }
 
 interface StateActive {
@@ -13,10 +16,18 @@ interface StateActive {
 }
 
 const Companies: React.FC<CompaniesProps> = (props: CompaniesProps) => {
+  const { companies, fetchStations, setCurrentNetwork } = props
+
   const [active, setActive] = useState<StateActive>({
     companyIndex: 0,
     cityIndex: 0
   })
+
+  useEffect(() => {
+    if (companies[0]) {
+      setCurrentNetwork(companies[0].name)
+    }
+  }, [])
 
   const changeActive = (companyIndex: number, cityIndex: number) => {
     setActive({ companyIndex, cityIndex })
@@ -32,10 +43,19 @@ const Companies: React.FC<CompaniesProps> = (props: CompaniesProps) => {
     )
   }
 
-  const { companies } = props
+  const onClickHandle = (
+    companyIndex: number,
+    cityIndex: number,
+    path: string,
+    company: string
+  ) => {
+    fetchStations(path)
+    changeActive(companyIndex, cityIndex)
+    setCurrentNetwork(company)
+  }
+
   return (
     <div>
-      this is company list
       <Accordion defaultActiveKey="0">
         {companies.map((company, companyIndex) => (
           <Card key={'company_' + companyIndex}>
@@ -59,7 +79,14 @@ const Companies: React.FC<CompaniesProps> = (props: CompaniesProps) => {
                           ? style.active
                           : ''
                       }`}
-                      onClick={() => changeActive(companyIndex, cityIndex)}
+                      onClick={(): void =>
+                        onClickHandle(
+                          companyIndex,
+                          cityIndex,
+                          city.cityId,
+                          company.name
+                        )
+                      }
                     >
                       {city.city}, {city.country}
                     </li>

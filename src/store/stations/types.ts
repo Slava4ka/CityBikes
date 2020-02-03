@@ -16,8 +16,8 @@ export interface MyStation {
 
 export interface MyStationState {
   readonly loading: boolean
-  readonly data: Station[]
-  readonly favorites?: Station[]
+  readonly data: MyStation[]
+  readonly favorites?: MyStation[]
   readonly errors?: string
 }
 

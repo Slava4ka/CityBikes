@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1176fffc-6739-493a-861c-b52acf693e71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/store/stations/filter.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Companies/Companies.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Companies/Companies.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Companies/Companies.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Companies/Companies.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Stations/Stations.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Stations/Stations.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Stations/Stations.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Stations/Stations.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MainPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/companies/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/companies/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/companies/filter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/companies/filter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/companies/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/companies/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/stations/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/stations/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/stations/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/stations/reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/stations/sagas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/stations/sagas.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/stations/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/stations/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/api.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,8 +39,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-redux-typescript-example" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -98,7 +99,7 @@
       <workItem from="1580490861329" duration="4183000" />
       <workItem from="1580568344815" duration="26577000" />
       <workItem from="1580672470971" duration="10708000" />
-      <workItem from="1580720564804" duration="7995000" />
+      <workItem from="1580720564804" duration="18507000" />
     </task>
     <servers />
   </component>
