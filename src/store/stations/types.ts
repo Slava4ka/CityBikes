@@ -1,22 +1,62 @@
-import { Company } from '../companies/types'
-
 export enum StationsActionTypes {
   FETCH_REQUEST = '@@stations/FETCH_REQUEST',
   FETCH_SUCCESS = '@@stations/FETCH_SUCCESS',
-  FETCH_ERROR = '@@stations/FETCH_ERROR'
+  FETCH_ERROR = '@@stations/FETCH_ERROR',
+  ADD_TO_FAVORITES = '@@stations/ADD_TO_FAVORITES',
+  REMOVE_FROM_FAVORITES = '@@stations/REMOVE_FROM_FAVORITES|'
 }
 
-export interface Station {
+export interface MyStation {
   id: number
   name: string
-  station_id: string
-  empty_slots: number
-  free_bikes: number
+  stationId: string
+  emptySlots: number
+  freeBikes: number
 }
 
-export interface StationState {
+export interface MyStationState {
   readonly loading: boolean
   readonly data: Station[]
   readonly favorites?: Station[]
   readonly errors?: string
+}
+
+// For request result
+
+export interface Location {
+  city: string
+  country: string
+  latitude: number
+  longitude: number
+}
+
+export interface Extra {
+  bike_uids: string[]
+  number: string
+  slots: number
+  uid: string
+}
+
+export interface Station {
+  empty_slots: number
+  extra: Extra
+  free_bikes: number
+  id: string
+  latitude: number
+  longitude: number
+  name: string
+  timestamp: Date
+}
+
+export interface Network {
+  company: string[]
+  href: string
+  id: string
+  location: Location
+  name: string
+  stations?: Station[]
+}
+
+export interface StationsObject {
+  network: Network
 }

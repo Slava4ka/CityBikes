@@ -23,16 +23,6 @@ export interface CompaniesState {
 }
 
 // For request result
-/*
-interface CompanyRequest {
-  company: string[]
-  id: string
-}
-
-export interface CompanyRequestResult {
-  networks: CompanyRequest[]
-}
-*/
 
 interface Location {
   city: string
@@ -57,6 +47,6 @@ interface Network {
   license?: License
 }
 
-export interface RootObject {
+export interface CompaniesObject {
   networks: Network[]
 }

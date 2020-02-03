@@ -1,7 +1,7 @@
-import { Company, RootObject } from './types'
+import { Company, CompaniesObject } from './types'
 import * as _ from 'lodash'
 
-export const companyRequestFilter = (data: RootObject): Company[] => {
+export const companyRequestFilter = (data: CompaniesObject): Company[] => {
   const uniqTemp = _.uniq(data.networks.map(c => c.company?.toString()))
 
   const withoutDuplication = uniqTemp.map(uc => {

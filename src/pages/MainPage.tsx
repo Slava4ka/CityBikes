@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { Company } from '../store/companies/types'
-import { fetchRequest } from '../store/companies/actions'
+import { companiesFetchRequest } from '../store/companies/actions'
 import { connect } from 'react-redux'
 import { ApplicationState } from '../store'
 import Companies from '../components/Companies/Companies'
 import Stations from '../components/Stations/Stations'
 import MySpinner from '../components/common/MySpinner/MySpinner'
+import { stationsFetchRequest } from '../store/stations/actions'
 
 interface PropsFromState {
   companiesLoading: boolean
@@ -15,7 +16,8 @@ interface PropsFromState {
 }
 
 interface PropsFromDispatch {
-  fetchCompanies: typeof fetchRequest
+  fetchCompanies: typeof companiesFetchRequest
+  fetchStations: typeof stationsFetchRequest
 }
 
 type AllProps = PropsFromState & PropsFromDispatch
@@ -25,11 +27,16 @@ const MainPage: React.FC<AllProps> = (props: AllProps) => {
     companiesLoading,
     companiesData,
     companiesError,
-    fetchCompanies
+    fetchCompanies,
+    fetchStations
   } = props
 
   useEffect(() => {
     fetchCompanies()
+  }, [])
+
+  useEffect(() => {
+    fetchStations('onroll-albacete')
   }, [])
 
   return (
@@ -61,7 +68,8 @@ const mapStateToProps = ({ companies }: ApplicationState) => ({
 })
 
 const mapDispatchToProps = {
-  fetchCompanies: fetchRequest
+  fetchCompanies: companiesFetchRequest,
+  fetchStations: stationsFetchRequest
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainPage)
