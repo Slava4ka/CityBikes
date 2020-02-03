@@ -82,13 +82,13 @@ const MainPage: React.FC<AllProps> = (props: AllProps) => {
   )
 }
 
-const mapStateToProps = ({ companies, stations }: ApplicationState) => ({
+const mapStateToProps = ({ companies, stationsPersist }: ApplicationState) => ({
   companiesLoading: companies.loading,
   companiesData: companies.data,
   companiesError: companies.errors,
-  stationsLoading: stations.loading,
-  stationsData: stations.data,
-  stationsError: stations.errors
+  stationsLoading: stationsPersist.loading,
+  stationsData: stationsPersist.data,
+  stationsError: stationsPersist.errors
 })
 
 const mapDispatchToProps = {

@@ -2,8 +2,15 @@ import { Store, createStore, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga'
 import { ApplicationState, reducer, rootSaga } from '.'
 import { composeWithDevTools } from 'redux-devtools-extension'
+import { persistStore } from 'redux-persist'
+import { Persistor } from 'redux-persist/es/types'
 
-export default function configureStore(): Store<ApplicationState> {
+interface ConfigureStoreReturn {
+  store: Store<ApplicationState>
+  persistor: Persistor
+}
+
+export default function configureStore(): ConfigureStoreReturn {
   const composeEnhancers = composeWithDevTools({})
   const sagaMiddleware = createSagaMiddleware()
 
@@ -13,5 +20,7 @@ export default function configureStore(): Store<ApplicationState> {
   )
 
   sagaMiddleware.run(rootSaga)
-  return store
+
+  const persistor = persistStore(store)
+  return { store, persistor }
 }

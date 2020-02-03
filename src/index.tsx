@@ -5,8 +5,11 @@ import App from './App'
 import * as serviceWorker from './serviceWorker'
 import configureStore from './store/configureStore'
 
-const store = configureStore()
+const { store, persistor } = configureStore()
 
-ReactDOM.render(<App store={store} />, document.getElementById('root'))
+ReactDOM.render(
+  <App store={store} persistor={persistor} />,
+  document.getElementById('root')
+)
 
 serviceWorker.unregister()
