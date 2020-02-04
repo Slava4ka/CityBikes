@@ -2,8 +2,7 @@ export enum StationsActionTypes {
   FETCH_REQUEST = '@@stations/FETCH_REQUEST',
   FETCH_SUCCESS = '@@stations/FETCH_SUCCESS',
   FETCH_ERROR = '@@stations/FETCH_ERROR',
-  ADD_TO_FAVORITES = '@@stations/ADD_TO_FAVORITES',
-  REMOVE_FROM_FAVORITES = '@@stations/REMOVE_FROM_FAVORITES|'
+  CHANGE_FAVORITES = '@@stations/CHANGE_FAVORITES'
 }
 
 export interface MyStation {
@@ -14,10 +13,15 @@ export interface MyStation {
   freeBikes: number
 }
 
+export interface Favorite {
+  name: string
+  stationId: string
+}
+
 export interface MyStationState {
   readonly loading: boolean
   readonly data: MyStation[]
-  readonly favorites?: MyStation[]
+  readonly favorites: Favorite[]
   readonly errors?: string
 }
 

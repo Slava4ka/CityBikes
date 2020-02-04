@@ -7,8 +7,8 @@ import { ApplicationState } from '../store'
 import Companies from '../components/Companies/Companies'
 import Stations from '../components/Stations/Stations'
 import MySpinner from '../components/common/MySpinner/MySpinner'
-import { stationsFetchRequest } from '../store/stations/actions'
-import { MyStation } from '../store/stations/types'
+import { stationsFetchRequest, changeFavorite } from '../store/stations/actions'
+import { Favorite, MyStation } from '../store/stations/types'
 import style from './MainPage.module.scss'
 
 interface PropsFromState {
@@ -17,12 +17,14 @@ interface PropsFromState {
   companiesError?: string
   stationsLoading: boolean
   stationsData: MyStation[]
+  stationsFavorite: Favorite[]
   stationsError?: string
 }
 
 interface PropsFromDispatch {
   fetchCompanies: typeof companiesFetchRequest
   fetchStations: typeof stationsFetchRequest
+  changeFavorite: typeof changeFavorite
 }
 
 type AllProps = PropsFromState & PropsFromDispatch
@@ -34,9 +36,11 @@ const MainPage: React.FC<AllProps> = (props: AllProps) => {
     companiesError,
     stationsLoading,
     stationsData,
+    stationsFavorite,
     stationsError,
     fetchCompanies,
-    fetchStations
+    fetchStations,
+    changeFavorite
   } = props
 
   useEffect(() => {
@@ -73,6 +77,8 @@ const MainPage: React.FC<AllProps> = (props: AllProps) => {
                 stations={stationsData}
                 stationsError={stationsError}
                 currentNetwork={currentNetwork}
+                stationsFavorite={stationsFavorite}
+                changeFavorite={changeFavorite}
               />
             </Col>
           </Row>
@@ -88,12 +94,14 @@ const mapStateToProps = ({ companies, stationsPersist }: ApplicationState) => ({
   companiesError: companies.errors,
   stationsLoading: stationsPersist.loading,
   stationsData: stationsPersist.data,
+  stationsFavorite: stationsPersist.favorites,
   stationsError: stationsPersist.errors
 })
 
 const mapDispatchToProps = {
   fetchCompanies: companiesFetchRequest,
-  fetchStations: stationsFetchRequest
+  fetchStations: stationsFetchRequest,
+  changeFavorite: changeFavorite
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainPage)

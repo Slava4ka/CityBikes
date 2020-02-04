@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1176fffc-6739-493a-861c-b52acf693e71" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/utils/reducersTransformations.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Companies/Companies.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Companies/Companies.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Companies/Companies.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Companies/Companies.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Stations/Stations.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Stations/Stations.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Stations/Stations.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Stations/Stations.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/companies/filter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/companies/filter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/stations/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/stations/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/stations/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/stations/reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/stations/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/stations/types.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +27,7 @@
         <option value="TypeScript JSX File" />
         <option value="SCSS File" />
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -30,7 +39,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../some_project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-redux-typescript-example" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -65,8 +74,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="Node.js.test.js">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="test.js" working-dir="$PROJECT_DIR$/src/utils">
       <method v="2" />
     </configuration>
     <configuration name="npm start" type="js.build_tools.npm">
@@ -79,6 +91,11 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.test.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -94,7 +111,7 @@
       <workItem from="1580568344815" duration="26577000" />
       <workItem from="1580672470971" duration="10708000" />
       <workItem from="1580720564804" duration="19602000" />
-      <workItem from="1580751428720" duration="6341000" />
+      <workItem from="1580751428720" duration="12599000" />
     </task>
     <servers />
   </component>

@@ -7,11 +7,12 @@
 
   .stationsBox__info {
     height: 10vh;
-    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    border-bottom: 1px solid rgba(0, 0, 0, .08);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    background: rgba(0, 0, 0, .05);
 
     div {
       margin-left: 18px;
@@ -28,15 +29,6 @@
   .stationsBox__list {
     height: 85vh;
     overflow: auto;
-
-    svg {
-      cursor: pointer;
-      color: rgba(0, 0, 0, .3);
-
-      :hover {
-        color: rgba(240, 5, 5, .4);
-      }
-    }
   }
 
   .stationsBox__listItem {
@@ -55,4 +47,25 @@
 
 .bold {
   font-weight: bold;
+}
+
+.heart {
+  svg {
+    cursor: pointer;
+    color: rgba(0, 0, 0, .3);
+
+    :hover {
+      color: rgba(240, 5, 5, .4);
+    }
+  }
+}
+
+.heart_active {
+  svg {
+    color: #ff3d36;
+
+    :hover {
+      color: #ff3d36;
+    }
+  }
 }

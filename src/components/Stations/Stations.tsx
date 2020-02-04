@@ -1,19 +1,34 @@
 import React from 'react'
-import { MyStation } from '../../store/stations/types'
+import { Favorite, MyStation } from '../../store/stations/types'
 import style from './Stations.module.scss'
 import { ListGroup } from 'react-bootstrap'
 import MySpinner from '../common/MySpinner/MySpinner'
 import { FaHeart } from 'react-icons/fa'
+import { changeFavorite } from '../../store/stations/actions'
+import { findF } from '../../utils/reducersTransformations'
 
 interface StationsProps {
   stationsLoading: boolean
   stations: MyStation[]
   stationsError?: string
   currentNetwork: string
+  stationsFavorite: Favorite[]
+  changeFavorite: typeof changeFavorite
 }
 
 const Stations: React.FC<StationsProps> = (props: StationsProps) => {
-  const { stationsLoading, stations, stationsError, currentNetwork } = props
+  const {
+    stationsLoading,
+    stations,
+    stationsError,
+    currentNetwork,
+    stationsFavorite,
+    changeFavorite
+  } = props
+
+  const favoriteCheck = (name: string, stationId: string): boolean => {
+    return findF(stationsFavorite, { name, stationId })
+  }
   return (
     <div className={`${style.stationsBox}`}>
       {stationsLoading ? (
@@ -40,7 +55,24 @@ const Stations: React.FC<StationsProps> = (props: StationsProps) => {
                 {stations.map((st, index) => (
                   <ListGroup.Item key={index.toString() + st.id}>
                     <div className={style.stationsBox__listItem}>
-                      {st.name} <FaHeart size={'1.3em'} />
+                      {st.name}
+                      <span
+                        className={`${style.heart} ${
+                          favoriteCheck(st.name, st.stationId)
+                            ? style.heart_active
+                            : ''
+                        }`}
+                      >
+                        <FaHeart
+                          size={'1.3em'}
+                          onClick={() =>
+                            changeFavorite({
+                              name: st.name,
+                              stationId: st.stationId
+                            })
+                          }
+                        />
+                      </span>
                     </div>
                   </ListGroup.Item>
                 ))}

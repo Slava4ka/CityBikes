@@ -1,5 +1,6 @@
 import { MyStationState, StationsActionTypes } from './types'
 import { Reducer } from 'redux'
+import { addOrRemove } from '../../utils/reducersTransformations'
 
 export const initialState: MyStationState = {
   loading: false,
@@ -22,11 +23,11 @@ const stationsReducer: Reducer<MyStationState> = (
     case StationsActionTypes.FETCH_ERROR: {
       return { ...state, loading: false, errors: action.payload }
     }
-    case StationsActionTypes.ADD_TO_FAVORITES: {
-      return { ...state, favorites: [...action.payload] }
-    }
-    case StationsActionTypes.REMOVE_FROM_FAVORITES: {
-      return { ...state, favorites: [...action.payload] }
+    case StationsActionTypes.CHANGE_FAVORITES: {
+      return {
+        ...state,
+        favorites: addOrRemove(state.favorites, action.payload)
+      }
     }
     default: {
       return state

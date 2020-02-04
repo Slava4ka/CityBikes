@@ -1,5 +1,6 @@
 import { Company, CompaniesObject } from './types'
 import * as _ from 'lodash'
+import { getName } from 'country-list'
 
 export const companyRequestFilter = (data: CompaniesObject): Company[] => {
   const uniqTemp = _.uniq(data.networks.map(c => c.company?.toString()))
@@ -14,7 +15,7 @@ export const companyRequestFilter = (data: CompaniesObject): Company[] => {
       return {
         city: c.location.city,
         cityId: c.id,
-        country: c.location.country
+        country: getName(c.location.country) || c.location.country
       }
     })
 
