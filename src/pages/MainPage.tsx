@@ -43,6 +43,8 @@ const MainPage: React.FC<AllProps> = (props: AllProps) => {
     changeFavorite
   } = props
 
+  const [currentNetwork, setCurrentNetwork] = useState<string>('')
+
   useEffect(() => {
     fetchCompanies()
   }, [])
@@ -53,8 +55,6 @@ const MainPage: React.FC<AllProps> = (props: AllProps) => {
     }
   }, [])
 
-  const [currentNetwork, setCurrentNetwork] = useState<string>('')
-
   return (
     <div className={style.mainPage}>
       {companiesLoading ? (
@@ -64,14 +64,14 @@ const MainPage: React.FC<AllProps> = (props: AllProps) => {
       ) : (
         <Container>
           <Row>
-            <Col md={6} lg={6}>
+            <Col sm={12} md={6} lg={6}>
               <Companies
                 fetchStations={fetchStations}
                 companies={companiesData}
                 setCurrentNetwork={setCurrentNetwork}
               />
             </Col>
-            <Col md={6} lg={6}>
+            <Col sm={12} md={6} lg={6}>
               <Stations
                 stationsLoading={stationsLoading}
                 stations={stationsData}
