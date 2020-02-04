@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/CityBikes/static/css/main.68645efc.chunk.css",
+    "main.js": "/CityBikes/static/js/main.acc86aeb.chunk.js",
+    "main.js.map": "/CityBikes/static/js/main.acc86aeb.chunk.js.map",
+    "runtime-main.js": "/CityBikes/static/js/runtime-main.7104e289.js",
+    "runtime-main.js.map": "/CityBikes/static/js/runtime-main.7104e289.js.map",
+    "static/js/2.43ec29d2.chunk.js": "/CityBikes/static/js/2.43ec29d2.chunk.js",
+    "static/js/2.43ec29d2.chunk.js.map": "/CityBikes/static/js/2.43ec29d2.chunk.js.map",
+    "index.html": "/CityBikes/index.html",
+    "precache-manifest.b0a7c512eaee5c53e8c8c7e0c0439733.js": "/CityBikes/precache-manifest.b0a7c512eaee5c53e8c8c7e0c0439733.js",
+    "service-worker.js": "/CityBikes/service-worker.js",
+    "static/css/main.68645efc.chunk.css.map": "/CityBikes/static/css/main.68645efc.chunk.css.map",
+    "static/js/2.43ec29d2.chunk.js.LICENSE.txt": "/CityBikes/static/js/2.43ec29d2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7104e289.js",
+    "static/js/2.43ec29d2.chunk.js",
+    "static/css/main.68645efc.chunk.css",
+    "static/js/main.acc86aeb.chunk.js"
+  ]
+}
